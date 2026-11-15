@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recoverready"
+version = "0.1.0"
+description = "Verified backups, ransomware guard, restore tests and an incident playbook, in one dependency-free CLI."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = []
+keywords = ["backup", "ransomware", "disaster-recovery", "rto", "rpo", "incident-response", "security"]
+
+[project.scripts]
+recoverready = "recoverready.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["recoverready*"]

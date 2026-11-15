@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+dist/
+.recoverready/
+backups/
+demo-output/
+reports/
+recoverready.json

@@ -1,0 +1,73 @@
+{
+  "organization": "Example Organisation",
+  "owner": "IT / Security lead",
+  "sources": [
+    "./data"
+  ],
+  "destinations": [
+    {
+      "path": "./backups/local",
+      "kind": "local"
+    },
+    {
+      "path": "./backups/offsite",
+      "kind": "offsite"
+    }
+  ],
+  "exclude": [
+    "*.tmp",
+    "*.swp",
+    "node_modules",
+    "__pycache__",
+    ".git",
+    "Thumbs.db"
+  ],
+  "rpo_hours": 24,
+  "rto_hours": 4,
+  "rto_overhead_minutes": 60,
+  "restore_test_every_days": 30,
+  "retention": {
+    "daily": 7,
+    "weekly": 4,
+    "monthly": 6
+  },
+  "ransomware_guard": {
+    "enabled": true,
+    "max_changed_percent": 30,
+    "min_files": 20
+  },
+  "critical_assets": [
+    {
+      "name": "Customer and order records",
+      "priority": 1,
+      "owner": "Operations"
+    },
+    {
+      "name": "Finance and accounting files",
+      "priority": 1,
+      "owner": "Finance"
+    },
+    {
+      "name": "Shared documents",
+      "priority": 2,
+      "owner": "All staff"
+    }
+  ],
+  "contacts": [
+    {
+      "role": "Incident lead",
+      "name": "Your name",
+      "phone": "+254 700 000 000"
+    },
+    {
+      "role": "IT support / provider",
+      "name": "Provider name",
+      "phone": "+254 700 000 001"
+    },
+    {
+      "role": "Management",
+      "name": "Director name",
+      "phone": "+254 700 000 002"
+    }
+  ]
+}
